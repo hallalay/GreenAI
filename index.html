@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="https://www.oru.se/favicon.ico">
+        <title>GreenAI</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.1/proj4.js"></script>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="./mapDesign.css?v=2" />
+        <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      
+      </head>
+<body>
+  <div id="progress-bar-container">
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progress-bar"></div>
+    </div>
+  </div> 
+
+
+  <div id="slide_in" class="Title">
+
+    <img src="https://im14.inviewer.se/skiss/68/68AMZFRBZO.png" alt="oru" id='oru'width="height" height="30%">
+
+    <h1>GreenAI</h1>
+    <h3>Explore the Green Area Index of Örebro by using this tool. Simply select the area of interest using the polygon tool, and watch as the AI works its magic. Please note that larger areas may take longer, so please be patient. Read more about the project <a href="https://www.oru.se/strategiska-satsningar/ai/ai-relaterade-nyheter/har-mater-ai-hur-gront-det-ar-i-orebro/">here</a>.</h3>
+
+    <img id="myImg" src="">
+    <img id="myMask" src="">
+
+    <div class="custom-dropdown">
+      <span>Index Options</span>
+      <i class="uil uil-angle-down"></i>
+      <div class="dropdown-content">
+        <div>
+          Bush Constant: <input type="number" id="area_bush_constant" min="0" max="2" step="0.01" value="0.55">
+        </div>
+        <div>
+          Grass Constant: <input type="number" id="area_grass_constant" min="0" max="2" step="0.01" value="1.5">
+        </div>
+        <div>
+          New Tree Constant: <input type="number" id="area_newTree_constant" min="0" max="2" step="0.01" value="1.63">
+        </div>
+        <div>
+          Tree Big Constant: <input type="number" id="area_treeBig_constant" min="0" max="2" step="0.01" value="1.8">
+        </div>
+        <div>
+          Tree Medium Constant: <input type="number" id="area_treeMedium_constant" min="0" max="2" step="0.01" value="1.55">
+        </div>
+        <div>
+          Tree Small Constant: <input type="number" id="area_treeSmall_constant" min="0" max="2" step="0.01" value="1.3">
+        </div>
+        <div>
+          PlayGr Constant: <input type="number" id="area_playGr_constant" min="0" max="2" step="0.01" value="1.2">
+        </div>
+        <div>
+          Social1 Constant: <input type="number" id="area_social1_constant" min="0" max="2" step="0.01" value="1.2">
+        </div>
+        <div>
+          Social2 Constant: <input type="number" id="area_social2_constant" min="0" max="2" step="0.01" value="1.2">
+        </div>
+        <div>
+          Social3 Constant: <input type="number" id="area_social3_constant" min="0" max="2" step="0.01" value="1.2">
+        </div>
+        <div>
+          Shadow Constant: <input type="number" id="area_shadow_constant" min="0" max="2" step="0.01" value="1.0">
+        </div>
+        <div>
+          CultiVland Constant: <input type="number" id="area_cultiVland_constant" min="0" max="2" step="0.01" value="1.5">
+        </div>
+        <div>
+          Pergola Constant: <input type="number" id="area_pergola_constant" min="0" max="2" step="0.01" value="0.3">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div id="map" class="map_cl">
+  </div>
+
+  
+
+    <script type="module">
+        import { MapApp } from './index.js';
+
+        window.initMap = () => {
+          const mapApp = new MapApp();
+          mapApp.initMap();
+        };
+    </script>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH8ZticCPVIPP5USPMsXdnRbmAEjTmlZU&libraries=drawing&v=weekly&callback=initMap"
+  defer
+></script>
+  
+</body>
+</html>
+
+
+
+
