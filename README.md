@@ -12,9 +12,7 @@ This project is a web-based application that uses AI models to calculate the Gre
 
 ## Installation and Usage
 
-To demonstrate 
-
-To
+You can access the already up and running website at https://greenai.aass.oru.se
 
 To use the application, navigate to the web page, use the map tool to circle an area, and then request the Green Area Index calculation. The result, along with the segmented image of the selected area, will be displayed once the calculation is complete.
 
