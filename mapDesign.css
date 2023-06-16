@@ -1,22 +1,85 @@
+body, html, .header {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ensures padding and border are included in element's total width and height */
+}
 
+body {
+    display: flex;
+    flex-direction: column;  /* stack children vertically */
+    height: 100vh;  /* full viewport height */
+    margin: 0;  /* remove default margin */
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 0fr;
+    /* gap: 10px 10px; */
+    grid-template-areas:
+        "logo . progress"
+        "title title title"
+        "dropdown . .";
+    /* height: 20px; */;
+
+    color: #f9f9f9;
+    padding: 0;
+
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.regionorebrolan.se/contentassets/a19739592e2b483ab4e8284055995324/bild-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#oru {
+    margin: 10px;
+    grid-area: logo;
+    height: 7vh;
+    width: auto;
+    max-width: 19vw;
+}
+
+#progress-bar-container {
+    grid-area: progress;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2vmin;
+    right: 0px;
+}
+
+.progress-bar {
+  
+    width: 30vmin;
+    height: 1vmin;
+    background-color: #ddd;
+    /* margin-bottom: 5px; */
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #ce1313;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+  }
 
 .custom-dropdown {
-    /* background-color: #f9f9f9; */
-    margin-top: 50px;
-    font-size: 2vmin;
+    padding: 8px;
+    font-size: 2.8vmin;
+    grid-area: dropdown;
     color:#f9f9f9;
-    position: relative;
     display: inline-block;
     z-index: 999;
-  }
+}
   
   .dropdown-content {
+    position: absolute;
     font-size: 16px;
     color: black;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
-    min-width: 180px;
+    /* min-width: 180px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 10px;
   }
@@ -29,160 +92,38 @@
     margin-bottom: 8px;
     width: 100px;
   }
-  
-  #progress-bar-container {
-    display: none; /* Remove if wantet */
-  
-    position: fixed;
-    top: 20px;
-    right: 20px;
+
+.title-page {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    grid-area: title;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-  }
-  .progress-bar {
-    display: none; /* Remove if wantet */
-  
-    width: 30vmin;
-    height: 1vmin;
-    background-color: #ddd;
-    margin-bottom: 5px;
-    overflow: hidden;
-    border-radius: 6px;
-  }
-  .progress-bar-fill {
-    display: none; /* Remove if wantet */
-  
-    height: 100%;
-    background-color: #4A96D2;
-    width: 0%;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  body{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.regionorebrolan.se/contentassets/a19739592e2b483ab4e8284055995324/bild-1.jpg');
-    /* background-size:con; */
-    
-    position: absolute;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #slide_in {
-    height: 28%
-  }
-  
-  #oru {
-    padding-top: 1%;
-    display: block;
-    margin-left: 20px;
-    margin-right: auto;
-    font-size: 2vmin;
-  }
-  
-  h1 {
-    position: absolute;
-    text-align: center;
-    color: white;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+.title-page h1 {
     font-size: 8vmin;
-    top: 3%;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
-    width: auto;
-  }
-  
-  h3 {
-    position:absolute;
-    text-align:center;
-    color: white;
-    top: 16%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5vmin;
-    color: white;
-  }
-  
-  @media (max-width: 800px) {
-    /* CSS rules specific to phones */
-    /* Add your styles here */
-  
-    .gm-style .gm-svpc,
-    .gm-style .gm-control-active,
-    .gm-style .gm-control-active:hover {
-      width: 1000px; /* Adjust the width as needed */
-      height: 40px; /* Adjust the height as needed */
-      font-size: 20px; /* Adjust the font size as needed */
-      line-height: 40px; /* Adjust the line height as needed */
-    }
-  
-    .map_cl{
-      height: 72%;
-      width: 100%;
-    }
-    
-    h3 {
-      position:absolute;
-      text-align:center;
-      color: white;
-      top: 16%;
-      margin-left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1vmin;
-      color: white;
-    }
-    
-    .custom-dropdown {
-    /* background-color: #f9f9f9; */
-    margin-top: 8vh;
-    font-size: 3vmin;
-    color:#f9f9f9;
-    display: inline-block;
-    z-index: 999;
-    }
-    
-    .dropdown-content {
-    font-size: 20px;
-    color: black;
-    display: none;
-    background-color: #f9f9f9;
-    min-width: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 10px;
-    }
-    
-    .custom-dropdown input[type="number"] {
-    margin-bottom: 8px;
-    margin-right: 1vw;
-    width: 220px;
-    font-size:20px;
-    }
-    
-  }
-  
-  .map_cl {
-    /* /* position: absolute; */
-    height: 100%;
-    width: 100%;
-    /* zoom: 115%; */
-    /* overflow-x: hidden; */ 
-  }
-  
-  
-  
-  /* 
-   * Optional: Makes the sample page fill the window. 
-   */
-  html,
-  body {
-    height: 100%;
+    text-align: center;
     margin: 0;
-    padding: 0;
+}
+
+.title-page h3 {
+    font-size: 3vmin;
+    text-align: center;
+    margin: 0;
+}
+
+.map_cl {
+    /* margin: 0, auto; */
+    flex-grow: 1;
+    width: 100%;
   }
-  
-  
-  /* polygon popup */
+
+    /* polygon popup */
   /* Style for the color bar container */
   .color-bar {
     border: 1px solid #000000;
@@ -223,11 +164,3 @@
     margin-bottom: 10px;
     margin-right: 10px;
   }
-  
-  #map .gm-style .gm-drawing-control button {
-    padding: 12px 50px; /* Adjust the padding values as needed */
-    font-size: 16px; /* Adjust the font size as needed */
-  }
-  
-  
-  
