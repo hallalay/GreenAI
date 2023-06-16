@@ -495,7 +495,7 @@ export class MapApp {
             area_pergola_constant: areaPergolaConstant,
           };
     
-          fetch("http://127.0.0.1:5000/api/update", {
+          fetch("/api/update", {
             method: 'POST',
             headers: {
               'Content-type': 'application/json',
@@ -562,7 +562,7 @@ export class MapApp {
           area_pergola_constant: areaPergolaConstant,
         };
     
-        return fetch("http://127.0.0.1:5000/api/receiver", {
+        return fetch("/api/receiver", {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
@@ -636,11 +636,12 @@ export class MapApp {
     updateProgressBar() {
         // Update the progress bar based on the progress retrieved from the server
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://127.0.0.1:5000/api/progress');
+        xhr.open('GET', '/api/progress');
         xhr.onload = function() {
           const progress = parseInt(xhr.responseText);
-          const progressBar = document.getElementById('progress-bar');
+          const progressBar = document.getElementsByClassName('progress-bar');
           progressBar.style.width = `${progress}%`;
+          console.log(progress);
         };
     
         xhr.send();
