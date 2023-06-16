@@ -7,26 +7,31 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.1/proj4.js"></script>
         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="./mapDesign.css?v=2" />
+        <!-- <link rel="stylesheet" type="text/css" href="./mapDesign.css?v=2" /> -->
+
+        <link rel="stylesheet" type="text/css" href="design.css">
         <script type="module" src="./index.js"></script>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       
       </head>
 <body>
-  <div id="progress-bar-container">
-    <div class="progress-bar">
-      <div class="progress-bar-fill" id="progress-bar"></div>
-    </div>
-  </div> 
+  
+  <header id="slide_in">
 
+    <div id="progress-bar-container">
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-bar"></div>
+      </div>
+    </div> 
 
-  <div id="slide_in" class="Title">
+    <img src="https://im14.inviewer.se/skiss/68/68AMZFRBZO.png" alt="oru" id='oru'>
 
-    <img src="https://im14.inviewer.se/skiss/68/68AMZFRBZO.png" alt="oru" id='oru'width="height" height="30%">
-
+    <div class="title-page">
     <h1>GreenAI</h1>
-    <h3>Explore the Green Area Index of Örebro by using this tool. Simply select the area of interest using the polygon tool, and watch as the AI works its magic. Please note that larger areas may take longer, so please be patient. Read more about the project <a href="https://www.oru.se/strategiska-satsningar/ai/ai-relaterade-nyheter/har-mater-ai-hur-gront-det-ar-i-orebro/">here</a>.</h3>
-
+    <h3>Explore the Green Area Index of Örebro by using this tool. Simply select the area of interest using the polygon tool, and watch as the AI works its magic. Please note that larger areas may take longer, so please be patient. Read more about the project <a href="https://www.oru.se/strategiska-satsningar/ai/ai-relaterade-nyheter/har-mater-ai-hur-gront-det-ar-i-orebro/" style="color: yellow">here</a>.</h3>
+      </div>
     <img id="myImg" src="">
     <img id="myMask" src="">
 
@@ -76,7 +81,7 @@
       </div>
     </div>
     
-  </div>
+  </header>
 
   <div id="map" class="map_cl">
   </div>
