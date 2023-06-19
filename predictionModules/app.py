@@ -139,3 +139,12 @@ def postME():
 if __name__ == "__main__":
     current_progress = 0
     app.run()
+
+'''If you run this on the server this should replace this with:
+
+from waitress import serve
+if __name__ == "__main__":
+        current_progress = 0
+
+        serve(app, host="0.0.0.0", port=5000)
+'''
