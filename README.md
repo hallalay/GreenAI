@@ -8,13 +8,22 @@ This project is a web-based application that uses AI models to calculate the Gre
 
 2. **Green Area Index Calculation:** Once an area is selected, the application uses machine learning segmentation models to analyze satellite imagery and calculate the Green Area Index. This process includes analyzing different types of green space such as bushes, grass, trees, and cultivated land.
 
-3. **Visual Feedback:** The application provides visual feedback by displaying the analyzed area and corresponding green space segmentation directly on the map. This feature helps users understand the distribution of green spaces within their selected area. To display this use the hand tool to click the polygon.
+3. **Visual Feedback:** The application provides visual feedback by displaying the analyzed area and corresponding green space segmentation directly on the map. This feature helps users understand the distribution of green spaces within their selected area.
 
-## Installation and Usage
+## Website Usage
 
 You can access the already up and running website at https://greenai.aass.oru.se
 
-To use the application, navigate to the web page, use the map tool to circle an area, and then request the Green Area Index calculation. The result, along with the segmented image of the selected area, will be displayed once the calculation is complete.
+To use the application, navigate to the web page, use the polygon tool to circle an area and the ai will generate the Green Area Index. The result will be displayed once the calculation is complete. Use the hand tool and click the polygon to display the image along with the segmented image.
+
+## Run locally
+
+1. Clone this repo
+2. Install the requirements from requirements.txt
+3. Get an API key from Google with the Maps javascript API enabled.
+4. Insert the API key in the URL on line 99 in index.html
+5. Run app.py
+6. Run index.html using 'live server' on visual studio code
  
 ## Future Work
 
