@@ -12,30 +12,29 @@ This project is a web-based application that uses AI models to calculate the Gre
 
 ## Website Usage
 
-You can access the already up and running website at https://greenai.aass.oru.se
+Visit our live website at https://greenai.aass.oru.se
 
-To use the application, navigate to the web page, use the polygon tool to circle an area and the ai will generate the Green Area Index. The result will be displayed once the calculation is complete. Use the hand tool and click the polygon to display the image along with the segmented image.
+To use the application, navigate to the web page, use the polygon tool to circle an area and the ai will generate the Green Area Index. The result will be displayed once the calculation is complete. To view the analyzed image along with the segmented one, use the hand tool and click on the polygon.
 
-## Run locally
+## Local Execution
 
 1. Clone this repo
 2. Install the requirements from requirements.txt
-3. Get an API key from Google with the Maps javascript API enabled.
+3. Obtain a Google API key with the Maps JavaScript API enabled.
 4. Insert the API key in the URL on line 101 in index.html
-5. Run app.py
-6. Run index.html using 'live server' on visual studio code
+5. Execute app.py
+6. Launch index.html using 'live server' on visual studio code
 
-## Update server website
-To update the website on the server you will need to ssh into the server at herman@greenai.aass.oru.se with it's corresponding password. All the files are located at /var/www/html and should look almost identical to the files in this repo. 
+## Server Website Update
+To update the website on the server you will need to ssh into the server at herman@greenai.aass.oru.se using the corresponding password. All necessary files are located at /var/www/html and should closely mirror the files in this repository.
 
-> **Note** There are two differences that are crucial. When fetching the flask response in the javascript the command will be different. on the server all that is needed is '/api/(receiver, progress, update)' while locally you would need to add 'http://127.0.0.1:5000' before if thats the ip your running on. 
-The app.py is also slightly different on the server and locally. You will need to change the last if __name__=='__main__': statement. It's documented in the code.
+> **Note** Two crucial differences exist. The command to fetch the Flask response in the JavaScript will vary. On the server, '/api/(receiver, progress, update)' suffices, whereas locally, 'http://127.0.0.1:5000' should precede if that's the IP you're operating on. Similarly, app.py differs between the server and local contexts, requiring a change in the last if __name__=='__main__': statement. This is clearly documented within the code.
 
-### Possible updates
-- Make a segmentation mask for the whole of Örebro into a ortophoto. in this way the user don't have to wait for the model to do the calculations and it would make the website inevitably faster.
+### Potential Updates
+- Make a segmentation mask for the whole of Örebro into a ortophoto. In this way the user don't have to wait for the model to do the calculations and it would make the website inevitably faster.
 
-### If website goes down
-If the website were to crash or go down, it's probably because of the app.py stopped running. To fix this, ssh into the server and run the command 
+### In case of website failure
+If the website crashes or goes offline, it is likely due to the termination of app.py. To rectify this, SSH into the server and execute the command:
 
 ```
 /usr/bin/tmux new-session -d -s myapp '/usr/bin/python3 /var/www/html/app.py >> /var/www/html/error.log 2>&1'
