@@ -21,7 +21,7 @@ To use the application, navigate to the web page, use the polygon tool to circle
 1. Clone this repo
 2. Install the requirements from requirements.txt
 3. Get an API key from Google with the Maps javascript API enabled.
-4. Insert the API key in the URL on line 99 in index.html
+4. Insert the API key in the URL on line 101 in index.html
 5. Run app.py
 6. Run index.html using 'live server' on visual studio code
  
