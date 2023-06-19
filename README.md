@@ -18,7 +18,7 @@ To use the application, navigate to the web page, use the map tool to circle an 
 
 ## Future Work
 
-Future updates aim to expand the available features and improve the AI models' accuracy and efficiency. Feedback and contributions are welcome.
+Future updates aim to expand the available features and improve the AI models' accuracy and efficiency.
 
 ## Contributing
 
