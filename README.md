@@ -34,6 +34,13 @@ The app.py is also slightly different on the server and locally. You will need t
 ### Possible updates
 - Make a segmentation mask for the whole of Örebro into a ortophoto. in this way the user don't have to wait for the model to do the calculations and it would make the website inevitably faster.
 
+### If website goes down
+If the website were to crash or go down, it's probably because of the app.py stopped running. To fix this, ssh into the server and run the command 
+
+```
+/usr/bin/tmux new-session -d -s myapp '/usr/bin/python3 /var/www/html/app.py >> /var/www/html/error.log 2>&1'
+```
+
 ## Future Work
 
 Future updates aim to expand the available features and improve the AI models' accuracy and efficiency.
