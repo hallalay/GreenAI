@@ -29,7 +29,10 @@ To use the application, navigate to the web page, use the polygon tool to circle
 To update the website on the server you will need to ssh into the server at herman@greenai.aass.oru.se with it's corresponding password. All the files are located at /var/www/html and should look almost identical to the files in this repo. 
 
 > **Note** There are two differences that are crucial. When fetching the flask response in the javascript the command will be different. on the server all that is needed is '/api/(receiver, progress, update)' while locally you would need to add 'http://127.0.0.1:5000' before if thats the ip your running on. 
-The app.py is also slightly different on the server and locally. You will need to change the last if __name__=='__main__': statement. It's documented in the code. 
+The app.py is also slightly different on the server and locally. You will need to change the last if __name__=='__main__': statement. It's documented in the code.
+
+# Possible updates
+- Make a segmentation mask for the whole of Örebro into a ortophoto. in this way the user don't have to wait for the model to do the calculations and it would make the website inevitably faster.
 
 ## Future Work
 
