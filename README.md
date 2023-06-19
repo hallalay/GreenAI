@@ -24,7 +24,10 @@ To use the application, navigate to the web page, use the polygon tool to circle
 4. Insert the API key in the URL on line 101 in index.html
 5. Run app.py
 6. Run index.html using 'live server' on visual studio code
- 
+
+## Update server website
+To update the website on the server you will need to ssh into the server at herman@greenai.aass.oru.se with it's corresponding password. All the files are located at /var/www/html and should look almos identical to the files in this repo. 
+
 ## Future Work
 
 Future updates aim to expand the available features and improve the AI models' accuracy and efficiency.
