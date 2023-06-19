@@ -16,6 +16,9 @@ You can access the already up and running website at https://greenai.aass.oru.se
 
 To use the application, navigate to the web page, use the map tool to circle an area, and then request the Green Area Index calculation. The result, along with the segmented image of the selected area, will be displayed once the calculation is complete.
 
+## Update the website
+To change anything on the website you can access the content under /var/www/html, all the files are located there. If the flask application would crash for any reason, run the app.py using tmux to keep it running.
+ 
 ## Future Work
 
 Future updates aim to expand the available features and improve the AI models' accuracy and efficiency.
